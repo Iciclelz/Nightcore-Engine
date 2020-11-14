@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../static/css/mainwindow.css">
+
+  <title>Nightcore Engine</title>
+</head>
+
+<body>
+
+  <table class="table table-sm table-borderless">
+    <tbody>
+
+      <tr>
+        <th scope="row">Type</th>
+        <td colspan="3">
+          <select class="form-control form-control-sm" id='type-select'>
+            <option>Single File Nightcore</option>
+            <option>Multiple File Nightcore</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">Input</th>
+        <td colspan="3">
+          <div class='input-group input-group-sm'>
+            <input type="text" class="form-control" placeholder="Select a music file to convert..."
+              id='input-file-input'>
+            <div class="input-group-append">
+              <button class="btn btn-outline-dark" id='input-file-button' type="button">...</button>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">Output</th>
+        <td colspan="3">
+          <div class='input-group input-group-sm'>
+            <input type="text" class="form-control"
+              placeholder="Select a music file which the input file will be converted to..." id='output-file-input'>
+            <div class="input-group-append">
+              <button class="btn btn-outline-dark" id='output-file-button' type="button">...</button>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">Frequency</th>
+        <td>
+          <input type="number" class="form-control" value="44100" id="frequency-input">
+        </td>
+        <td>+</td>
+        <td>
+          <input type="number" class="form-control" value="15000" id="frequency-increase-input">
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" colspan="4"><button id='construct-nightcore-button' type='button'
+            class='col-sm btn btn-sm btn-outline-dark'>Construct Nightcore</button></th>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script> let exports = {}; </script>
+  <script src="../dist/mainwindowrenderer.js"></script>
+</body>
+
+</html>
